@@ -1,4 +1,7 @@
 # AlgorithmPracticeOnJS
+
+![readme title](https://github.com/KaiZerg/AlgorithmPracticeOnJS/blob/master/title.png)
+
 **Algorithm scripting practice on JS**
 
 1. **Basic Algorithm scripting**
