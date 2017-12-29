@@ -2,7 +2,7 @@
 ![readme title](https://github.com/KaiZerg/AlgorithmPracticeOnJS/blob/master/title.png)
 
 
-**[Algorithm scripting practice on JS](https://kaizerg.github.io/online-store/)**
+**[Algorithm scripting practice on JS](https://kaizerg.github.io/AlgorithmPracticeOnJS/)**
 
 
 1. **Basic Algorithm scripting**
