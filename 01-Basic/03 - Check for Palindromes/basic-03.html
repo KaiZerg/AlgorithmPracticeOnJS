@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<div class="content">
+	<a class="home-btn" href="index.html">HOMEPAGE</a>
+	<h1>Check for Palindromes</h1>
+	<p>Return true if the given string is a palindrome. Otherwise, return false.
+	A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.
+	Note
+	You'll need to remove all non-alphanumeric characters (punctuation, spaces and symbols) and turn everything lower case in order to check for palindromes.
+	We'll pass strings with varying formats, such as "racecar", "RaceCar", and "race CAR" among others.
+	We'll also pass strings with special symbols, such as "2A3*3a2", "2A3 3a2", and "2_A3*3#A2".
+	</p>
+	<h3>Type in commands below into browser console, to see the result:</h3>
+	<ul>
+	    <li>palindrome("eye") should return a boolean.</li>
+	    <li>palindrome("eye") should return true.</li>
+	    <li>palindrome("_eye") should return true.</li>
+	    <li>palindrome("not a palindrome") should return false.</li>
+	    <li>palindrome("A man, a plan, a canal. Panama") should return true.</li>
+	</ul>
+ 	<h3>My solution:</h3>
+  	<blockquote>
+  	 <p>function palindrome(str) {<br>
+  	&nbsp; &nbsp; var newStr = str.replace(/[\W_-]/g, '');<br>
+  	&nbsp; &nbsp; var lowerStr = newStr.toLowerCase();<br>
+  	&nbsp; &nbsp; var revStr = lowerStr.split('').reverse().join('');<br>
+  	&nbsp; &nbsp; return lowerStr == revStr;<br>
+	}</p><br>
+  	</blockquote>
+	<h2>What did i learn?</h2>
+	<ul>
+	    <li>The <strong>replace()</strong> method returns a new string with some or all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp.</li>
+	    <li>I used <strong>.replace(/[\W_-]/g, '')</strong> in order to remove all non-alphanumeric characters</li>
+	    <li>The <strong>toLowerCase()</strong> method returns the calling string value converted to lower case.</li>
+	</ul>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

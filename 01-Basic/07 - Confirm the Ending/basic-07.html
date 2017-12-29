@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<div class="content">
+	<a class="home-btn" href="index.html">HOMEPAGE</a>
+	<h1>Confirm the ending</h1>
+	<p>Check if a string (first argument, str) ends with the given target string (second argument, target).
+	This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the 
+	purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+
+	</p>
+	<h3>Type in commands below into browser console, to see the result:</h3>
+	<ul>
+	    <li>confirmEnding("Bastian", "n") should return true.</li>
+	    <li>confirmEnding("Connor", "n") should return false.</li>
+	    <li>confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification") should return false.</li>
+	    <li>confirmEnding("He has to give me a new name", "name") should return true.</li>
+ 	    <li>confirmEnding("Open sesame", "same") should return true.</li>
+	    <li>Do not use the built-in method .endsWith() to solve the challenge.</li>
+	</ul>
+	<h3>My solution:</h3>
+  	<blockquote><p>
+	function confirmEnding(str, target) {<br>
+  	&nbsp; &nbsp; var check = str.substring(str.length - target.length);<br>
+  	&nbsp; &nbsp; return check == target;<br>
+	}
+	</p>
+  	</blockquote>
+	<h2>What did i learn?</h2>
+	<ul>
+	    <li>The <strong>substring()</strong> method returns a subset of a string between one index and another, or through the end of the string.</li>
+	    <li>Where the arguments of the <strong>substring()</strong> method represent the starting and ending indexes, the arguments of <strong>substr()</strong> method represent the starting index and the length of characters to include in the resulting string.</li>
+	    <li>Example uses the substring() method and length property to extract the last characters of a particular string. This method may be easier to remember, given that you don't need to know the starting and ending indices</li>
+	    
+	</ul>
+	
+</div>
+<script src="app.js"></script>
+</body>
+</html>

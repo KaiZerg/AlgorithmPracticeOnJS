@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<div class="content">
+	<a class="home-btn" href="index.html">HOMEPAGE</a>
+	<h1>Title Case a Sentence</h1>
+	<p>Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+	For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
+	</p>
+	<h3>Type in commands below into browser console, to see the result:</h3>
+	<ul>
+	    <li>titleCase("I'm a little tea pot") should return a string.</li>
+	    <li>titleCase("I'm a little tea pot") should return "I'm A Little Tea Pot".</li>
+	    <li>titleCase("sHoRt AnD sToUt") should return "Short And Stout".</li>
+	    <li>titleCase("HERE IS MY HANDLE HERE IS MY SPOUT") should return "Here Is My Handle Here Is My Spout".</li>
+	</ul>
+	<h3>My solution:</h3>
+  	<blockquote><p>
+	function titleCase(str) {<br>
+  	&nbsp; &nbsp; var myArray = str.toLowerCase().split(' ');  //convert the sentence to lower case and split it into an array<br>
+  	&nbsp; &nbsp; for(var i=0;i<myArray.length;i++){<br>
+     	&nbsp; &nbsp;&nbsp; &nbsp; myArray[i] = myArray[i].charAt(0).toUpperCase() + myArray[i].substring(1);<br>
+  	&nbsp; &nbsp; }<br>
+  	&nbsp; &nbsp; myArray = myArray.join(' ');<br>
+  	&nbsp; &nbsp; return myArray;<br>
+	}</p>
+  	</blockquote>
+	<h2>What did i learn?</h2>
+	<ul>
+	    <li>While iterating through the array, for each string I converted the first character to upper case using the Array.charAt() method and toUpperCase method, then using the substring method take out the string excludung the first character and
+ concatenate the first character to this string, this will produce a string with the first character in upper case</li>
+	    
+	</ul>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

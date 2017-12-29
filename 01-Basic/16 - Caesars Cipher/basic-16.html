@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<div class="content">
+	<a class="home-btn" href="index.html">HOMEPAGE</a>
+	<h1>Caesars Cipher</h1>
+	<p>One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher. In a shift cipher the meanings of the letters are shifted by some set amount.
+	A common modern use is the ROT13  cipher, where the values of the letters are shifted by 13 places. Thus 'A' ↔ 'N', 'B' ↔ 'O' and so on.
+	Write a function which takes a ROT13  encoded string as input and returns a decoded string.
+	All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
+	</p>
+	<h3>Type in commands below into browser console, to see the result:</h3>
+	<ul>
+	    <li>rot13("SERR PBQR PNZC") should decode to "FREE CODE CAMP"</li>
+	    <li>rot13("SERR CVMMN!") should decode to "FREE PIZZA!"</li>
+	    <li>rot13("SERR YBIR?") should decode to "FREE LOVE?"</li>
+	    <li>rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.") should decode to "THE QUICK BROWN DOG JUMPED OVER THE LAZY FOX."</li>
+	</ul>
+	<h3>My solution:</h3>
+  	<blockquote><p>
+	function rot13(str) {<br> 
+  	&nbsp; &nbsp; var newString = '';<br>
+  	&nbsp; &nbsp; var code;<br>
+  	&nbsp; &nbsp; for(var i = 0; i < str.length; i++){<br>
+    	&nbsp; &nbsp; &nbsp; &nbsp; code = str.charCodeAt(i);<br>
+    	&nbsp; &nbsp; &nbsp; &nbsp; if(65 <= code && code <= 77){<br>
+      	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; newString = newString + String.fromCharCode(code + 13);<br>
+    	&nbsp; &nbsp; &nbsp; &nbsp; } else if (78 <= code && code <= 90) {<br>
+      	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; newString = newString + String.fromCharCode(code - 13);<br>
+    	&nbsp; &nbsp; &nbsp; &nbsp; } else {<br>
+      	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; newString = newString + String.fromCharCode(code);<br>
+    	&nbsp; &nbsp; &nbsp; &nbsp; }<br>
+  	&nbsp; &nbsp; }<br>
+  	&nbsp; &nbsp; return newString;<br>
+	}
+	</p>
+  	</blockquote>
+	<h2>What did i learn?</h2>
+	<ul>
+	    <li>The <strong>charCodeAt()</strong> method returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index</li>
+	    <li>The static <strong>String.fromCharCode()</strong> method returns a string created from the specified sequence of UTF-16 code units.</li>
+	    <li><strong>ROT13</strong> - is a simple letter substitution cipher that replaces a letter with the 13th letter after it, in the alphabet. ROT13 is a special case of the Caesar cipher, developed in ancient Rome.</li>
+	    
+	</ul>
+	
+</div>
+<script src="app.js"></script>
+</body>
+</html>

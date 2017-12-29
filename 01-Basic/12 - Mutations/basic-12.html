@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<div class="content">
+	<a class="home-btn" href="index.html">HOMEPAGE</a>
+	<h1>Mutations</h1>
+	<p>Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+	For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+	The arguments ["hello", "hey"] should return false because the string "hello" does not contain a "y".
+	Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien".
+	</p>
+	<h3>Type in commands below into browser console, to see the result:</h3>
+	<ul>
+	    <li>mutation(["hello", "hey"]) should return false.</li>
+	    <li>mutation(["hello", "Hello"]) should return true.</li>
+	    <li>mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]) should return true.</li>
+	    <li>mutation(["Mary", "Army"]) should return true.</li>
+	    <li>mutation(["Mary", "Aarmy"]) should return true.</li>
+	    <li>mutation(["Alien", "line"]) should return true.</li>
+	    <li>mutation(["floor", "for"]) should return true.</li>
+	    <li>mutation(["hello", "neo"]) should return false.</li>
+	</ul>
+	<h3>My solution:</h3>
+  	<blockquote><p>
+	function mutation(arr) {<br>
+    &nbsp; &nbsp; var first = arr[0].toLowerCase().split('');<br>
+    &nbsp; &nbsp; var second = arr[1].toLowerCase().split('');<br>
+    &nbsp; &nbsp; var temp = 0;<br>
+    &nbsp; &nbsp; for (var s in second){<br>
+        &nbsp; &nbsp;&nbsp; &nbsp; if (first.indexOf(second[s]) > -1) {<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; temp+= 0;<br>
+        &nbsp; &nbsp;&nbsp; &nbsp; } else {<br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; temp+=1;<br>
+        &nbsp; &nbsp;&nbsp; &nbsp; }<br>
+    &nbsp; &nbsp; if (temp === 0)<br>
+        &nbsp; &nbsp;&nbsp; &nbsp; return true;<br>
+    &nbsp; &nbsp; else<br>
+        &nbsp; &nbsp;&nbsp; &nbsp; return false;<br>
+	}
+	</p>
+  	</blockquote>
+	<h2>What did i learn?</h2>
+	<ul>
+	    <li>Take the first and second parameter and make them lowercase and split them by characters.</li>
+	    <li>Create a temp variable to keep count.</li>
+	    <li>For each letter in the second parameter, check if it is found on the first, if so then add 0 to the temp variable, otherwise add 1.</li>
+	    <li>Outside the loop, if temp is 0 then return true, otherwise false, this acts as an on and off. If all the letters were added then we just get 0, otherwise there will be at least a 1 which means one letter was not found.</li>
+	</ul>
+	
+</div>
+<script src="app.js"></script>
+</body>
+</html>

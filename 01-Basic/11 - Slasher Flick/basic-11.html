@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<div class="content">
+	<a class="home-btn" href="index.html">HOMEPAGE</a>
+	<h1>Slasher Flick</h1>
+	<p>Return the remaining elements of an array after chopping off n elements from the head.
+	The head means the beginning of the array, or the zeroth index.
+	</p>
+	<h3>Type in commands below into browser console, to see the result:</h3>
+	<ul>
+	    <li>slasher([1, 2, 3], 2) should return [3].</li>
+	    <li>slasher([1, 2, 3], 0) should return [1, 2, 3].</li>
+	    <li>slasher([1, 2, 3], 9) should return [].</li>
+	    <li>slasher([1, 2, 3], 4) should return [].</li>
+	    <li>slasher(["burgers", "fries", "shake"], 1) should return ["fries", "shake"].</li>
+	    <li>slasher([1, 2, "chicken", 3, "potatoes", "cheese", 4], 5) should return ["cheese", 4].</li>
+	</ul>
+	<h3>My solution:</h3>
+  	<blockquote><p>
+	function slasher(arr, howMany) {<br>
+  	&nbsp; &nbsp; var newArr = arr.slice(howMany);<br>
+  	&nbsp; &nbsp; return newArr;<br>
+	}
+	</p>
+  	</blockquote>
+	<h2>What did i learn?</h2>
+	<ul>
+	    <li>How short and easy the solution might be!:)</li>
+	</ul>
+	
+</div>
+<script src="app.js"></script>
+</body>
+</html>

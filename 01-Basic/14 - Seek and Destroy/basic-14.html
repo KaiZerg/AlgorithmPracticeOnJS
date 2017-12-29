@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<div class="content">
+	<a class="home-btn" href="index.html">HOMEPAGE</a>
+	<h1>Seek and Destroy</h1>
+	<p>You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+	</p>
+	<h3>Type in commands below into browser console, to see the result:</h3>
+	<ul>
+	    <li>destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].</li>
+	    <li>destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3) should return [1, 5, 1].</li>
+	    <li>destroyer([3, 5, 1, 2, 2], 2, 3, 5) should return [1].</li>
+	    <li>destroyer([2, 3, 2, 3], 2, 3) should return [].</li>
+	    <li>destroyer(["tree", "hamburger", 53], "tree", 53) should return ["hamburger"].</li>
+	</ul>
+	<h3>My solution:</h3>
+  	<blockquote><p>
+	function destroyer(arr) {<br>
+  	&nbsp; &nbsp; var args = Array.prototype.slice.call(arguments);<br>
+  	&nbsp; &nbsp; args.splice(0,1);<br>
+  	&nbsp; &nbsp; return arr.filter(function(element) {<br>
+    	&nbsp; &nbsp;&nbsp; &nbsp; return args.indexOf(element) === -1;<br>
+  	&nbsp; &nbsp; });<br>
+	}
+	</p>
+  	</blockquote>
+	<h2>What did i learn?</h2>
+	<ul>
+	    <li>The first line will turn the arguments variable into a full array instead of the limited array it currently it.</li>
+	    <li>Next I remove the first argument since I don't need, since I only want the other arguments passed besides the first which is the array we are going to compare against.</li>
+	    <li>The use the filter() to filter out the elements that are on the array and keep the ones that are not.</li>
+	    
+	</ul>
+	
+</div>
+<script src="app.js"></script>
+</body>
+</html>

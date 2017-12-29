@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<div class="content">
+	<a class="home-btn" href="index.html">HOMEPAGE</a>
+	<h1>Truncate a String</h1>
+	<p>Truncate a string (first argument) if it is longer than the given maximum string length (second argument). 
+	Return the truncated string with a ... ending.
+	Note that inserting the three dots to the end will add to the string length.
+	However, if the given maximum string length num is less than or equal to 3, then the addition of the three 
+	dots does not add to the string length in determining the truncated string.
+	</p>
+	<h3>Type in commands below into browser console, to see the result:</h3>
+	<ul>
+	    <li>truncateString("A-tisket a-tasket A green and yellow basket", 11) should return "A-tisket...".</li>
+	    <li>truncateString("Peter Piper picked a peck of pickled peppers", 14) should return "Peter Piper...".</li>
+	    <li>truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length) should return "A-tisket a-tasket A green and yellow basket".</li>
+	    <li>truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) should return "A-tisket a-tasket A green and yellow basket".</li>
+	    <li>truncateString("A-", 1) should return "A...".</li>
+	    <li>truncateString("Absolutely Longer", 2) should return "Ab...".</li>
+	</ul>
+	<h3>My solution:</h3>
+  	<blockquote><p>
+	function truncateString(str, num) {<br>
+  	&nbsp; &nbsp; if(num <= 3) {<br>
+    	&nbsp; &nbsp;&nbsp; &nbsp; return str.slice(0, num).concat("...");<br>
+  	&nbsp; &nbsp; } else if(str.length > num) {<br>
+    	&nbsp; &nbsp;&nbsp; &nbsp; return str.slice(0, num-3).concat("...");<br>
+  	&nbsp; &nbsp; } else {<br>
+    	&nbsp; &nbsp;&nbsp; &nbsp; return str;<br>
+  	&nbsp; &nbsp;}<br>
+	}
+	</p>
+  	</blockquote>
+	<h2>What did i learn?</h2>
+	<ul>
+	    <li>The <strong>slice()</strong> method extracts a section of a string and returns it as a new string.</li>
+	    <li><strong>slice()</strong> extracts the text from one string and returns a new string. Changes to the text in one string do not affect the other string.</li>
+	    <li>The <strong>concat()</strong> method combines the text of one or more strings and returns a new string.</li>
+	    
+	</ul>
+	
+</div>
+<script src="app.js"></script>
+</body>
+</html>
