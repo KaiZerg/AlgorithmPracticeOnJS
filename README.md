@@ -1,8 +1,9 @@
 # AlgorithmPracticeOnJS
-
 ![readme title](https://github.com/KaiZerg/AlgorithmPracticeOnJS/blob/master/title.png)
 
-**Algorithm scripting practice on JS**
+
+**[Algorithm scripting practice on JS](https://kaizerg.github.io/online-store/)**
+
 
 1. **Basic Algorithm scripting**
   -  Reverse a String
