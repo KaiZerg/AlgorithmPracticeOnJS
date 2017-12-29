@@ -3,7 +3,7 @@
     color: #164980;
     display: flex;
     justify-content: center;
-       
+
 }
 a {
     text-decoration: none;
@@ -15,7 +15,8 @@ a {
 }
 a:hover {
     background-color: #b6e1fc;
-    
+    cursor: pointer;
+
 }
 
 .content {
@@ -29,14 +30,13 @@ a:hover {
     width: 800px;
     transition: ALL 0.5s linear;
     box-sizing: border-box;
-        
+
 }
 .content:hover {
-    cursor: pointer;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
-    
-    
+
+
 }
 ul, p {
     max-width: 500px;

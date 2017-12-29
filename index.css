@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     font-family: sans-serif;
-       
+
 }
 
 .content {
@@ -18,13 +18,12 @@
     max-width: 800px;
     transition: ALL 0.5s linear;
     box-sizing: border-box;
-        
+
 }
 .content:hover {
-    cursor: pointer;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
-       
+
 }
 .box {
     display: flex;
@@ -40,11 +39,13 @@
     padding: 5px 5px;
     margin-bottom: 5px;
     transition: ALL .5s linear;
+    min-height: 20px;
 
 }
 .column-list li:hover {
     background-color: #b6e1fc;
-    
+    cursor: pointer;
+
 }
 .column-list h3 {
     text-align: center;
